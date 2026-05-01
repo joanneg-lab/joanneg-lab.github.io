@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Joanne G. — Administratrice d'Infrastructures Sécurisées</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0f2744;
+      --accent: #1d6fa4;
+      --accent-light: #e8f2f9;
+      --text: #1a1a2e;
+      --text-mid: #3d4a5c;
+      --text-muted: #6b7a8d;
+      --border: #d0dae6;
+      --bg: #f7f9fc;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 3rem 3.5rem;
+      max-width: 560px;
+      width: 100%;
+      box-shadow: 0 4px 24px rgba(15,39,68,0.08);
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-family: 'DM Mono', monospace;
+      color: var(--accent);
+      background: var(--accent-light);
+      border: 1px solid #b8d4e8;
+      border-radius: 4px;
+      padding: 3px 10px;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 0.4rem;
+    }
+
+    .title {
+      font-size: 14px;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1.75rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 1.75rem;
+    }
+
+    .accroche {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+    }
+
+    .tag {
+      font-size: 11.5px;
+      font-family: 'DM Mono', monospace;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 3px 9px;
+      color: var(--text-mid);
+    }
+
+    .btn-cv {
+      display: block;
+      width: 100%;
+      padding: 0.85rem;
+      background: var(--navy);
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      margin-bottom: 1rem;
+      transition: background 0.2s;
+    }
+
+    .btn-cv:hover { background: var(--accent); }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .links a:hover { color: var(--accent); }
+
+    .location {
+      text-align: center;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 1.5rem;
+      font-style: italic;
+    }
+
+    @media (max-width: 480px) {
+      .card { padding: 2rem 1.5rem; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+
+    <div class="badge">Stage recherché · Du 27/08/2026 au 04/11/2026</div>
+
+    <h1>Joanne Gout</h1>
+    <div class="title">Administratrice d'Infrastructures Sécurisées</div>
+
+    <hr class="divider">
+
+    <p class="accroche">
+      En formation AIS, je conçois et administre une infrastructure personnelle de niveau production — virtualisation Proxmox, réseau segmenté, portail captif, supervision et sauvegardes chiffrées.
+    </p>
+
+    <div class="tags">
+      <span class="tag">Linux · Debian</span>
+      <span class="tag">Proxmox</span>
+      <span class="tag">pfSense · VLANs</span>
+      <span class="tag">FreeRADIUS · LDAP</span>
+      <span class="tag">Zabbix · Grafana</span>
+      <span class="tag">Docker</span>
+      <span class="tag">nftables</span>
+      <span class="tag">WireGuard</span>
+    </div>
+
+    <a class="btn-cv" href="CV_Joanne_G_AIS_pub.pdf" download>
+      ↓ Télécharger le CV
+    </a>
+
+    <div class="links">
+      <a href="https://linkedin.com/in/joanne-gout" target="_blank">
+        ↗ LinkedIn
+      </a>
+      <a href="https://github.com/joanneg-lab" target="_blank">
+        ↗ GitHub
+      </a>
+      <!-- <a href="https://lapps-info.org" target="_blank">
+        ↗ lapps-info.org
+      </a> -->
+    </div>
+
+    <div class="location">Toulouse · Occitanie · Télétravail</div>
+
+  </div>
+</body>
+</html>
