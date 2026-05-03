@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Joanne G. — Administratrice d'Infrastructures Sécurisées. Formation AIS, recherche de stage Toulouse/télétravail (27/08–04/11/2026).">
+  <meta name="theme-color" content="#0f2744">
   <title>Joanne G. — Administratrice d'Infrastructures Sécurisées</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono&display=swap" rel="stylesheet">
   <style>
@@ -16,42 +18,58 @@
       --text-muted: #6b7a8d;
       --border: #d0dae6;
       --bg: #f7f9fc;
+      --success: #059669;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
+      background: linear-gradient(135deg, var(--bg) 0%, #f0f7fe 100%);
       color: var(--text);
       min-height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 2rem;
+      line-height: 1.6;
     }
 
-    .card {
+    .container {
       background: white;
       border: 1px solid var(--border);
       border-radius: 12px;
       padding: 3rem 3.5rem;
-      max-width: 560px;
+      max-width: 580px;
       width: 100%;
       box-shadow: 0 4px 24px rgba(15,39,68,0.08);
+      animation: fadeIn 0.4s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      margin-bottom: 2rem;
     }
 
     .badge {
       display: inline-block;
-      font-size: 11px;
+      font-size: 10px;
       font-family: 'DM Mono', monospace;
-      color: var(--accent);
-      background: var(--accent-light);
-      border: 1px solid #b8d4e8;
+      color: var(--success);
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
       border-radius: 4px;
-      padding: 3px 10px;
-      margin-bottom: 1.5rem;
+      padding: 4px 10px;
+      margin-bottom: 1rem;
       letter-spacing: 0.05em;
+      font-weight: 500;
+      text-transform: uppercase;
     }
 
     h1 {
@@ -59,7 +77,8 @@
       font-weight: 500;
       color: var(--navy);
       line-height: 1.2;
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: -0.01em;
     }
 
     .title {
@@ -67,27 +86,40 @@
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.5rem;
+      font-weight: 400;
     }
 
     .divider {
       border: none;
       border-top: 1px solid var(--border);
-      margin-bottom: 1.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      font-size: 12px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+      font-weight: 500;
     }
 
     .accroche {
       font-size: 14px;
       color: var(--text-mid);
       line-height: 1.7;
-      margin-bottom: 1.75rem;
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-bottom: 2rem;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .tag {
@@ -96,13 +128,27 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 4px;
-      padding: 3px 9px;
+      padding: 4px 10px;
       color: var(--text-mid);
+      font-weight: 400;
+      white-space: nowrap;
     }
 
-    .btn-cv {
+    .tag.highlight {
+      background: var(--accent-light);
+      border-color: #b8d4e8;
+      color: var(--accent);
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
       display: block;
-      width: 100%;
       padding: 0.85rem;
       background: var(--navy);
       color: white;
@@ -112,17 +158,35 @@
       font-size: 14px;
       font-weight: 500;
       letter-spacing: 0.02em;
-      margin-bottom: 1rem;
-      transition: background 0.2s;
+      transition: all 0.2s ease;
+      border: 1px solid var(--navy);
+      cursor: pointer;
     }
 
-    .btn-cv:hover { background: var(--accent); }
+    .btn:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(29, 111, 164, 0.2);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--accent-light);
+      border-color: var(--accent);
+    }
 
     .links {
       display: flex;
       justify-content: center;
       gap: 1.5rem;
       flex-wrap: wrap;
+      margin-bottom: 1.5rem;
     }
 
     .links a {
@@ -133,66 +197,138 @@
       align-items: center;
       gap: 0.3rem;
       transition: color 0.2s;
+      font-family: 'DM Mono', monospace;
     }
 
-    .links a:hover { color: var(--accent); }
+    .links a:hover {
+      color: var(--accent);
+    }
 
     .location {
       text-align: center;
       font-size: 12px;
       color: var(--text-muted);
-      margin-top: 1.5rem;
       font-style: italic;
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      margin-top: 1.5rem;
     }
 
+    .location strong {
+      color: var(--navy);
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    /* Responsive */
     @media (max-width: 480px) {
-      .card { padding: 2rem 1.5rem; }
-      h1 { font-size: 22px; }
+      .container {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 22px;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+      .links {
+        gap: 1rem;
+      }
+    }
+
+    /* Dark mode (optionnel, si l'utilisateur l'active) */
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #0f1419;
+      }
+      .container {
+        background: #16202e;
+        border-color: #2d3e4f;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+      }
+      h1 { color: #e8f2f9; }
+      .title, .text-mid { color: #b0c0d4; }
+      .text-muted { color: #7a8f9e; }
+      .tag {
+        background: #1f2d3d;
+        border-color: #2d3e4f;
+        color: #9eb3c5;
+      }
+      .tag.highlight {
+        background: rgba(29, 111, 164, 0.15);
+        border-color: rgba(29, 111, 164, 0.3);
+        color: #5eb3ff;
+      }
+      .divider, .location { border-color: #2d3e4f; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="container">
 
-    <div class="badge">Stage recherché · Du 27/08/2026 au 04/11/2026</div>
-
-    <h1>Joanne Gout</h1>
-    <div class="title">Administratrice d'Infrastructures Sécurisées</div>
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">🎯 Stage recherché · 27/08–04/11/2026</div>
+      <h1>Joanne G.</h1>
+      <div class="title">Administratrice d'Infrastructures Sécurisées</div>
+    </div>
 
     <hr class="divider">
 
-    <p class="accroche">
-      En formation AIS, je conçois et administre une infrastructure personnelle de niveau production — virtualisation Proxmox, réseau segmenté, portail captif, supervision et sauvegardes chiffrées.
-    </p>
-
-    <div class="tags">
-      <span class="tag">Linux · Debian</span>
-      <span class="tag">Proxmox</span>
-      <span class="tag">pfSense · VLANs</span>
-      <span class="tag">FreeRADIUS · LDAP</span>
-      <span class="tag">Zabbix · Grafana</span>
-      <span class="tag">Docker</span>
-      <span class="tag">nftables</span>
-      <span class="tag">WireGuard</span>
+    <!-- Accroche -->
+    <div class="section">
+      <p class="accroche">
+        En formation AIS, je conçois et administre une infrastructure personnelle de niveau production — virtualisation Proxmox, réseau segmenté, portail captif, supervision et sauvegardes chiffrées.
+      </p>
     </div>
 
-    <a class="btn-cv" href="CV_Joanne_G_AIS_pub.pdf" download>
-      ↓ Télécharger le CV
-    </a>
-
-    <div class="links">
-      <a href="https://linkedin.com/in/joanne-gout" target="_blank">
-        ↗ LinkedIn
-      </a>
-      <a href="https://github.com/joanneg-lab" target="_blank">
-        ↗ GitHub
-      </a>
-      <!-- <a href="https://lapps-info.org" target="_blank">
-        ↗ lapps-info.org
-      </a> -->
+    <!-- Compétences -->
+    <div class="section">
+      <div class="section-title">Compétences clés</div>
+      <div class="tags">
+        <span class="tag highlight">Linux · Debian</span>
+        <span class="tag highlight">Proxmox</span>
+        <span class="tag">pfSense · VLANs</span>
+        <span class="tag">FreeRADIUS · LDAP</span>
+        <span class="tag">Zabbix · Grafana</span>
+        <span class="tag">Docker</span>
+        <span class="tag">nftables · Sécurité</span>
+        <span class="tag">WireGuard · VPN</span>
+        <span class="tag">PBS · Sauvegardes</span>
+      </div>
     </div>
 
-    <div class="location">Toulouse · Occitanie · Télétravail</div>
+    <!-- Actions -->
+    <div class="section">
+      <div class="buttons">
+        <a class="btn" href="CV_Joanne_G_AIS_pub.pdf" download>
+          📄 Télécharger mon CV
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/joanneg-lab" target="_blank">
+          → Voir mes projets (GitHub)
+        </a>
+      </div>
+    </div>
+
+    <!-- Liens -->
+    <div class="section">
+      <div class="links">
+        <a href="https://linkedin.com/in/joanne-gout" target="_blank">
+          LinkedIn
+        </a>
+        <a href="https://github.com/joanneg-lab" target="_blank">
+          GitHub
+        </a>
+        <a href="https://github.com/joanneg-lab/homelab" target="_blank">
+          Homelab Docs
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="location">
+      📍 <strong>Toulouse</strong>, Occitanie · 100% télétravail accepté
+    </div>
 
   </div>
 </body>
